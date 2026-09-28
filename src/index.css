@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    color-scheme: dark;
+    background-color: #090a0f;
+  }
+
+  body {
+    background-color: #090a0f;
+    color: #f1f5f9;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #090a0f;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e2230;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #333b52;
+  }
+}
+
+.font-code {
+  font-family: var(--font-mono);
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeInPage 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
